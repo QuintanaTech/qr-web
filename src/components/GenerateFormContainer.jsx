@@ -8,7 +8,7 @@ import isJson from "../helpers/isJson";
 import {css, StyleSheet} from "aphrodite";
 
 const srcFromData = data => `data:image/png;base64,${data.data.data}`;
-const textValue = () => document.getElementById(DataId).value;
+const textValue = () => document.getElementById(DataId)?.value;
 
 const styles = StyleSheet.create({
   codeContainer: {
