@@ -13,6 +13,7 @@ const textValue = () => document.getElementById(DataId) ? document.getElementByI
 const styles = StyleSheet.create({
   codeContainer: {
     padding: '0 20px',
+    width: '100%',
   },
 })
 
