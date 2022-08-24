@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   },
 })
 
-export default function () {
+export default function Heading() {
   return (
     <div className={css(styles.heading)}>
       <h2 className="bp4-heading">QR Generation API</h2>

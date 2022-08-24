@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   },
 })
 
-export default function () {
+export default function GenerateFormContainer() {
   const imageMutation = useMutation(generate)
   const onGenerateClick = () => imageMutation.mutate(textValue())
 
