@@ -30,7 +30,7 @@ export default function GenerateFormContainer() {
       <div className={css(styles.codeContainer)}>
         <p>
           Sample Curl:<br />
-          <code>curl -d &quot;{textValue()}&quot; \<br />
+          <code>curl -d &squot;{textValue()}&squot; \<br />
             -H {isJson(textValue()) ? 'application/json' : 'text/plain'} \<br />
             -X POST {API_BASE_URL}/v1/qr</code>
         </p>
