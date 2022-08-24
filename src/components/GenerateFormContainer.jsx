@@ -31,7 +31,7 @@ export default function GenerateFormContainer() {
         <p>
           Sample Curl:<br />
           <code>curl -d &squot;{textValue()}&squot; \<br />
-            -H {isJson(textValue()) ? 'application/json' : 'text/plain'} \<br />
+            -H 'Content-Type: {isJson(textValue()) ? 'application/json' : 'text/plain'}' \<br />
             -X POST {API_BASE_URL}/v1/qr</code>
         </p>
         <p>
