@@ -8,7 +8,7 @@ import isJson from "../helpers/isJson";
 import {css, StyleSheet} from "aphrodite";
 
 const srcFromData = data => `data:image/png;base64,${data.data.data}`;
-const textValue = () => document.getElementById(DataId)?.value;
+const textValue = () => document.getElementById(DataId) ? document.getElementById(DataId).value : '';
 
 const styles = StyleSheet.create({
   codeContainer: {
@@ -31,11 +31,11 @@ export default function GenerateFormContainer() {
           Sample Curl:<br />
           <code>curl -d &quot;{textValue()}&quot; \<br />
             -H {isJson(textValue()) ? 'application/json' : 'text/plain'} \<br />
-            -X POST {API_BASE_URL}/qr</code>
+            -X POST {API_BASE_URL}/v1/qr</code>
         </p>
         <p>
           As image src url:<br />
-          <code>{API_BASE_URL}/qr.png?data={encodeURIComponent(textValue())}</code>
+          <code>{API_BASE_URL}/v1/qr.png?data={encodeURIComponent(textValue())}</code>
         </p>
       </div>
     </>
